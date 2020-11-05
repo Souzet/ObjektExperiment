@@ -8,9 +8,16 @@ namespace ObjektExperiment
 {
     class Program
     {
-        class person
+        class Person
         {
-            public string förnamn, efternamn, hemtelefon, jobbtelefon;
+            private string förnamn, efternamn, hemtelefon, jobbtelefon;
+            public Person(string S, string E, string H, string J)
+            {
+                förnamn= S; 
+                efternamn= E; 
+                hemtelefon= H; 
+                jobbtelefon= J;
+            }
             public void Print()
             {
                 Console.WriteLine("{0} {1}    {2}    {3}", förnamn, efternamn, hemtelefon, jobbtelefon);
@@ -18,14 +25,9 @@ namespace ObjektExperiment
         }
         static void Main(string[] args)
         {
-            person Arne = new person()
-            {
-                förnamn = "Arne",
-                efternamn = "Saknusem",
-                hemtelefon = "012-13 13 13",
-                jobbtelefon = "073- 747 57 67"
-            };
+            Person Arne = new Person("Arne", "Saknusem", "012-13 13 13", "073- 747 57 67");
             Arne.Print();
+            
         }
     }
 }
