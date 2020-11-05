@@ -8,26 +8,31 @@ namespace ObjektExperiment
 {
     class Program
     {
-        class Person
+        class Land
         {
-            private string förnamn, efternamn, hemtelefon, jobbtelefon;
-            public Person(string S, string E, string H, string J)
-            {
-                förnamn= S; 
-                efternamn= E; 
-                hemtelefon= H; 
-                jobbtelefon= J;
-            }
-            public void Print()
-            {
-                Console.WriteLine("{0} {1}    {2}    {3}", förnamn, efternamn, hemtelefon, jobbtelefon);
-            }
+            string namn;
+            public Stad huvudstad;
+            int invånarantal;
+        }
+        class Stad
+        {
+            public string namn;
+            int invånarantal;
+
         }
         static void Main(string[] args)
         {
-            Person Arne = new Person("Arne", "Saknusem", "012-13 13 13", "073- 747 57 67");
-            Arne.Print();
+            // string land;-> string Land.namn
+            // string huvudstad;-> Stad Land.huvudstad
+            // string stad;-> Stad.namn
+            // int invånarantal;-> int Land.invånarantal,
+            //int Stad.invånarantal,
+            Stad Stockholm = new Stad();
+            Stockholm.namn = "Stockholm";
+            Land Sverige = new Land();
+            Sverige.huvudstad = Stockholm;
             
+
         }
     }
 }
