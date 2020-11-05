@@ -8,52 +8,24 @@ namespace ObjektExperiment
 {
     class Program
     {
-       class Bil
+        class person
         {
-            private string bilmärke, årsmodell;
-            private int antalMil;
-            public Bil(string B, string Å, int M)
+            public string förnamn, efternamn, hemtelefon, jobbtelefon;
+            public void Print()
             {
-                bilmärke = B;
-                årsmodell = Å;
-                antalMil = M;
-            }
-            public int AntalMil()
-            {
-                return antalMil;
-            }
-            public bool UppdateraMil( int nyttAntalMil)
-            {
-                if(nyttAntalMil < antalMil)
-                {
-                    return false;
-                }
-                antalMil = nyttAntalMil;
-                return true;
+                Console.WriteLine("{0} {1}    {2}    {3}", förnamn, efternamn, hemtelefon, jobbtelefon);
             }
         }
         static void Main(string[] args)
         {
-            Bil B = new Bil("Lada", "1990", 137672);
-            Console.WriteLine("Antal mil = {0}", B.AntalMil());
-            if (B.UppdateraMil(137670))
+            person Arne = new person()
             {
-                Console.WriteLine("Miltalet uppdaterades!");
-            }
-            else
-            {
-                Console.WriteLine("Miltalet var fel, uppdaterades inte!" );
-            }
-            Console.WriteLine("Antal mil = {0}", B.AntalMil());
-            if (B.UppdateraMil(137674))
-            {
-                Console.WriteLine("Miltalet uppdaterades!");
-            }
-            else
-            {
-                Console.WriteLine("Miltalet var fel, uppdaterades inte!");
-            }
-            Console.WriteLine("Antal mil = {0}", B.AntalMil());
+                förnamn = "Arne",
+                efternamn = "Saknusem",
+                hemtelefon = "012-13 13 13",
+                jobbtelefon = "073- 747 57 67"
+            };
+            Arne.Print();
         }
     }
 }
