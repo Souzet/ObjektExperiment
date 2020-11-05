@@ -17,12 +17,16 @@ namespace ObjektExperiment
                 bilmärke = B;
                 årsmodell = Å;
                 antalMil = M;
-
+            }
+            public int AntalMil()
+            {
+                return antalMil;
             }
         }
         static void Main(string[] args)
         {
             Bil B = new Bil("Lada", "1990", 137672);
+            Console.WriteLine("Antal mil = {0}", B.AntalMil());
             
         }
     }
