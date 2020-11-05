@@ -11,7 +11,12 @@ namespace ObjektExperiment
         
         class Person
         {
-            public string förnamn, efternamn;                         
+            public string förnamn, efternamn; 
+            public void Print()
+            {
+                Console.WriteLine($"{förnamn} {efternamn}");
+            }
+
         }
         static void Main(string[] args)
         {
@@ -21,11 +26,13 @@ namespace ObjektExperiment
                 förnamn = "Kalle",
                 efternamn = "Anka"
             };
+            P.Print();
             Person Q = new Person()
             {            
                 förnamn = "Kajsa",
                 efternamn = "Anka"
             };
+            Q.Print();
             
 
             
