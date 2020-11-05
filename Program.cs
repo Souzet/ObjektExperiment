@@ -22,12 +22,38 @@ namespace ObjektExperiment
             {
                 return antalMil;
             }
+            public bool UppdateraMil( int nyttAntalMil)
+            {
+                if(nyttAntalMil < antalMil)
+                {
+                    return false;
+                }
+                antalMil = nyttAntalMil;
+                return true;
+            }
         }
         static void Main(string[] args)
         {
             Bil B = new Bil("Lada", "1990", 137672);
             Console.WriteLine("Antal mil = {0}", B.AntalMil());
-            
+            if (B.UppdateraMil(137670))
+            {
+                Console.WriteLine("Miltalet uppdaterades!");
+            }
+            else
+            {
+                Console.WriteLine("Miltalet var fel, uppdaterades inte!" );
+            }
+            Console.WriteLine("Antal mil = {0}", B.AntalMil());
+            if (B.UppdateraMil(137674))
+            {
+                Console.WriteLine("Miltalet uppdaterades!");
+            }
+            else
+            {
+                Console.WriteLine("Miltalet var fel, uppdaterades inte!");
+            }
+            Console.WriteLine("Antal mil = {0}", B.AntalMil());
         }
     }
 }
