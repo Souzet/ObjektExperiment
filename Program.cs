@@ -16,6 +16,10 @@ namespace ObjektExperiment
             {
                 Console.WriteLine($"{förnamn} {efternamn}");
             }
+            public string GetString()
+            {
+                return $"{förnamn} {efternamn}"; 
+            }
 
         }
         static void Main(string[] args)
@@ -27,15 +31,20 @@ namespace ObjektExperiment
                 efternamn = "Anka"
             };
             P.Print();
+            Console.WriteLine(P.GetString());
             Person Q = new Person()
             {            
                 förnamn = "Kajsa",
                 efternamn = "Anka"
             };
             Q.Print();
-            
+            Console.WriteLine(Q.GetString());
 
-            
+
+
+
+
+
 
 
         }
